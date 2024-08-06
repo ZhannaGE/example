@@ -1,28 +1,29 @@
-//для того, чтобы убедиться, что DOM загружен перед запуском скрипта.
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.services__tab');
     const readMoreBtn = document.querySelector('.services__read-more');
-    const hiddenText = document.querySelector('.hidden-text');
-
+    const hiddenText = document.querySelector('.services__hidden-text');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            document.querySelector('.services__tab.active').classList.remove('active');
-            tab.classList.add('active');
+            const activeTab = document.querySelector('.services__tab--active');
+            if (activeTab) {
+                activeTab.classList.remove('services__tab--active');
+            }
+            tab.classList.add('services__tab--active');
         });
     });
 
-    readMoreBtn.addEventListener('click', () => {
-        if (hiddenText.classList.contains('visible')) {
-            hiddenText.classList.remove('visible');
-            hiddenText.classList.add('hidden320');
-            readMoreBtn.textContent = 'Читать далее';
-        } else {
-            hiddenText.classList.remove('hidden320');
-            hiddenText.classList.add('visible');
-            readMoreBtn.textContent = 'Скрыть';
-        }
-    });
-
-
+    if (readMoreBtn && hiddenText) {
+        readMoreBtn.addEventListener('click', () => {
+            if (hiddenText.classList.contains('services__hidden-text--visible')) {
+                hiddenText.classList.remove('services__hidden-text--visible');
+                hiddenText.classList.add('services__hidden-text--320');
+                readMoreBtn.textContent = 'Читать далее';
+            } else {
+                hiddenText.classList.remove('services__hidden-text--320');
+                hiddenText.classList.add('services__hidden-text--visible');
+                readMoreBtn.textContent = 'Скрыть';
+            }
+        });
+    }
 });
