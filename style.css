@@ -28,6 +28,12 @@ button {
   cursor: pointer;
 }
 
+.header__menu-button:hover,
+.header__logo-item:hover,
+.header__icon img:hover{
+  transform: scale(1.1);
+}
+
 /* Header */
 .header {
   display: flex;
