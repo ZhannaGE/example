@@ -10,50 +10,84 @@
 </head>
 <body>
     <header class="header">
-        <div class="header__menu">
-            <button class="header__menu-button"><img src="assets/icon/burger2.png" alt="menu"></button>
-        </div>
-        <div class="header__separator header__separator--for768"></div>
+            <button class="header__menu-button"><img src="assets/icon/burger2.png" alt="menu"></button>  
+        
         <div class="header__logo">
             <img src="assets/icon/Group.png" alt="CPS Logo">
         </div>
-        <div class="header__separator header__separator--for320"></div>
-        <div class="header__logo header__logo--for768">
-            <ul class="header__logo-list">
-                <li class="header__logo-item"><img src="assets/icon/chat copy.png" alt="chat copy"></li>
-                <li class="header__logo-item"><img src="assets/icon/chat.png" alt="chat"></li>
-                <li class="header__logo-item"><img src="assets/icon/profile.png" alt="profile"></li>
+      
+        <div class="header__info header__info--for768">
+            <ul class="header__info-list">
+                <li class="header__info-item"><img src="assets/icon/chat copy.png" alt="chat copy"></li>
+                <li class="header__info-item"><img src="assets/icon/chat.png" alt="chat"></li>
+                <li class="header__info-item"><img src="assets/icon/profile.png" alt="profile"></li>
             </ul>
         </div>
-        <div class="header__separator header__separator--for768"></div>
-
-        <div class="header__icons">
-            <button class="header__icon">
-                <img src="assets/icon/repair.png" alt="repair">
-            </button>
-            <button class="header__icon">
-                <img src="assets/icon/checkstatus.png" alt="checkstatus">
-            </button>
-        </div>
+        
+            <ul class="icon-list">
+                <li class="icon-list__item">
+                    <img src="assets/icon/repair.png" alt="repair">
+                </li>
+                <li class="icon-list__item">
+                    <img src="assets/icon/checkstatus.png" alt="checkstatus">
+                </li>
+            </ul>
     </header>
     <div class="header-line"></div>
+
+    <div class="menu">
+        <div class="menu__header">
+            <button class="menu__close-button"><img src="assets/icon/burger.png" alt="Close"></button>
+            <img src="assets/icon/Group.png" alt="CPS Logo" class="menu__logo">
+            <button class="menu__search-button"><img src="assets/icon/search.png" alt="Search"></button>
+        </div>
+        <nav class="menu__nav">
+            <ul class="menu__list">
+                <div class="services__left-bar"></div>
+                <li class="menu__item"><a href="#" class="menu__link">Ремонт техники</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Услуги и сервисы</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Корпоративным клиентам</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Продавцам техники</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Партнерам</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Производителям</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Наши сервисные центры</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="menu__contacts">
+            <div class="menu__icons">
+                <a href="#" class="menu__icon"><img src="assets/icon/chat copy.png" alt="Phone"></a>
+                <a href="#" class="menu__icon"><img src="assets/icon/chat.png" alt="Message"></a>
+                <a href="#" class="menu__icon"><img src="assets/icon/profile.png" alt="User"></a>
+            </div>
+            <div class="menu__email">mail@cps.com</div>
+            <div class="menu__phone">8 800 890 8900</div>
+            <div class="menu__languages">
+                <a href="#" class="menu__language">RU</a>
+                <a href="#" class="menu__language">EN</a>
+                <a href="#" class="menu__language">CH</a>
+            </div>
+        </div>
+    </div>
+
     <main class="main">
         <section class="services">
             <div class="services__container">
                 <div class="services__left-bar"></div>
                 <h1 class="services__title">Услуги и сервисы</h1>
-                <div class="header__icons header__icons--1120">
-                    <button class="header__icon">
-                        <p class="header__icon-description header__icon-description--1120">Оставить заявку</p>
-                        <img src="assets/icon/repair.png" alt="repair">
-                    </button>
-                    <button class="header__icon">
-                        <p class="header__icon-description header__icon-description--1120">Статус ремонта</p>
-                        <img src="assets/icon/checkstatus.png" alt="checkstatus">
-                    </button>
-                </div>
+
+                <ul class="icon-list  icon-list--1120">
+                <li class="icon-list__item">
+                    <p class="icon-list__description icon-list__description--1120">Оставить заявку</p>
+                    <img src="assets/icon/repair.png" alt="repair"></li>
+                <li class="icon-list__item">
+                    <p class="icon-list__description icon-list__description--1120">Статус ремонта</p>
+                    <img src="assets/icon/checkstatus.png" alt="checkstatus">
+                </li>
+                </ul>
+
             </div>
-            <div class="services__tabs">
+            <nav class="services__tabs">
                 <ul class="services__tab-list">
                     <li class="services__tab services__tab--active">Ремонтируемые бренды</li>
                     <li class="services__tab">Дополнительные услуги</li>
@@ -62,8 +96,8 @@
                     <li class="services__tab">Специальные цены</li>
                     <li class="services__tab">Отзывы</li>
                 </ul>
-            </div>
-            <div class="services__flex-for768">
+            </nav>
+            <div class="services__info">
                 <div class="services__description">
                     <p class="services__text">
                         Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
@@ -72,12 +106,14 @@
                             </span>
                         </span>
                     </p>
-                    <div class="services__toggle-container">
+                    <button class="services__toggle-container">
                         <img src="assets/icon/expand.png" alt="expand" class="services__toggle-img">
                         <p class="services__read-more">Читать далее</p>
-                    </div>
+                    </button>
                 </div>
-                <div class="services__image"></div>
+                <div class="services__image">
+                    <img src="assets/image/320.png" alt="main-logo">
+                </div>
             </div>
         </section>
     </main>

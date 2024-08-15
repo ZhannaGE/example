@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.services__tab');
     const readMoreBtn = document.querySelector('.services__read-more');
     const hiddenText = document.querySelector('.services__hidden-text');
+    const menuButton = document.querySelector('.header__menu-button');
+    const closeButton = document.querySelector('.menu__close-button');
+    const menu = document.querySelector('.menu');
 
+    // табы
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const activeTab = document.querySelector('.services__tab--active');
@@ -12,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add('services__tab--active');
         });
     });
+
+    // расскрытие текста
 
     if (readMoreBtn && hiddenText) {
         readMoreBtn.addEventListener('click', () => {
@@ -26,4 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // меню
+
+    menuButton.addEventListener('click', function() {
+        menu.classList.toggle('menu--open');
+    });
+
+    closeButton.addEventListener('click', function() {
+        menu.classList.remove('menu--open');
+    });
+
+
 });
