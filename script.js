@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const tabs = document.querySelectorAll('.services__tab');
     const readMoreBtn = document.querySelector('.services__read-more');
@@ -5,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.querySelector('.header__menu-button');
     const closeButton = document.querySelector('.menu__close-button');
     const menu = document.querySelector('.menu');
+    const elements = document.querySelectorAll('.menu__link');
 
     // табы
     tabs.forEach(tab => {
@@ -37,11 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     menuButton.addEventListener('click', function() {
         menu.classList.toggle('menu--open');
+        menu.classList.toggle('active');
     });
 
     closeButton.addEventListener('click', function() {
         menu.classList.remove('menu--open');
+        menu.classList.remove('active');
     });
 
+    //полосаменю
+    function clearActiveClasses() {
+        elements.forEach(element => {
+            element.classList.remove('active');
+        });
+    }
+    
+    // Добавляем обработчик клика на каждый элемент
+    elements.forEach(element => {
+        element.addEventListener('click', function() {
+            clearActiveClasses(); 
+            this.classList.add('active'); 
+        });
+    });
 
 });

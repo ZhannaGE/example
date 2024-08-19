@@ -4,32 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CPS Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/font/TTLakes/stylesheet.css">
     <link rel="icon" href="assets/icon/repair.png" type="image/png">
 </head>
 <body>
+    <div class="conteiner">
     <header class="header">
             <button class="header__menu-button"><img src="assets/icon/burger2.png" alt="menu"></button>  
-        
-        <div class="header__logo">
-            <img src="assets/icon/Group.png" alt="CPS Logo">
-        </div>
-      
-        <div class="header__info header__info--for768">
-            <ul class="header__info-list">
-                <li class="header__info-item"><img src="assets/icon/chat copy.png" alt="chat copy"></li>
-                <li class="header__info-item"><img src="assets/icon/chat.png" alt="chat"></li>
-                <li class="header__info-item"><img src="assets/icon/profile.png" alt="profile"></li>
+            <!-- без обертки не получается, повесила на этот див after and before -->
+            <div class="header__logo">
+                <img src="assets/icon/Group.png" alt="CPS Logo">
+            </div>
+            
+      <!-- тут тоже, происхоит конфлик с правилом display:none/ display:flex использую в разных
+      участках кода при призном размере -->
+        <div class="info--size768">
+            <ul class="info-list">
+                <li class="info-item">
+                    <button>
+                    <img src="assets/icon/chat copy.png" alt="chat copy">     
+                    </button>   
+                </li> 
+                <li class="info-item">
+                    <button>
+                    <img src="assets/icon/chat.png" alt="chat">    
+                    </button>
+                </li>
+                <li class="info-item">
+                    <button>
+                     <img src="assets/icon/profile.png" alt="profile">    
+                    </button>
+                </li>
             </ul>
         </div>
-        
+
             <ul class="icon-list">
                 <li class="icon-list__item">
-                    <img src="assets/icon/repair.png" alt="repair">
+                    <button>
+                   <img src="assets/icon/repair.png" alt="repair">      
+                    </button>
                 </li>
                 <li class="icon-list__item">
-                    <img src="assets/icon/checkstatus.png" alt="checkstatus">
+                    <button>
+                   <img src="assets/icon/checkstatus.png" alt="checkstatus">     
+                    </button>
+                    
                 </li>
             </ul>
     </header>
@@ -43,8 +63,7 @@
         </div>
         <nav class="menu__nav">
             <ul class="menu__list">
-                <div class="services__left-bar"></div>
-                <li class="menu__item"><a href="#" class="menu__link">Ремонт техники</a></li>
+                <li class="menu__item"><a href="#" class="menu__link active">Ремонт техники</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Услуги и сервисы</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Корпоративным клиентам</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Продавцам техники</a></li>
@@ -52,21 +71,34 @@
                 <li class="menu__item"><a href="#" class="menu__link">Производителям</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Наши сервисные центры</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+    
             </ul>
         </nav>
         <div class="menu__contacts">
-            <div class="menu__icons">
-                <a href="#" class="menu__icon"><img src="assets/icon/chat copy.png" alt="Phone"></a>
-                <a href="#" class="menu__icon"><img src="assets/icon/chat.png" alt="Message"></a>
-                <a href="#" class="menu__icon"><img src="assets/icon/profile.png" alt="User"></a>
-            </div>
+            <ul class="info-list">
+                <li class="info-item">
+                    <button>
+                    <img src="assets/icon/chat copy.png" alt="chat copy">     
+                    </button>   
+                </li> 
+                <li class="info-item">
+                    <button>
+                    <img src="assets/icon/chat.png" alt="chat">    
+                    </button>
+                </li>
+                <li class="info-item">
+                    <button>
+                     <img src="assets/icon/profile.png" alt="profile">    
+                    </button>
+                </li>
+            </ul>
             <div class="menu__email">mail@cps.com</div>
             <div class="menu__phone">8 800 890 8900</div>
-            <div class="menu__languages">
-                <a href="#" class="menu__language">RU</a>
-                <a href="#" class="menu__language">EN</a>
-                <a href="#" class="menu__language">CH</a>
-            </div>
+            <ul class="menu__languages">
+                <li class="menu__language">RU</li>
+                <li class="menu__language">EN</li>
+                <li class="menu__language">CH</li>
+            </ul>
         </div>
     </div>
 
@@ -76,13 +108,18 @@
                 <div class="services__left-bar"></div>
                 <h1 class="services__title">Услуги и сервисы</h1>
 
-                <ul class="icon-list  icon-list--1120">
-                <li class="icon-list__item">
-                    <p class="icon-list__description icon-list__description--1120">Оставить заявку</p>
-                    <img src="assets/icon/repair.png" alt="repair"></li>
-                <li class="icon-list__item">
-                    <p class="icon-list__description icon-list__description--1120">Статус ремонта</p>
-                    <img src="assets/icon/checkstatus.png" alt="checkstatus">
+                <ul class="icon-list  icon-list--size1120">
+                <li>
+                    <button class="icon-list__item">
+                     <p class="icon-list__description icon-list__description--size1120">Оставить заявку</p>
+                     <img src="assets/icon/repair.png" alt="repair">    
+                    </button>
+                   </li>
+                <li>
+                    <button class="icon-list__item">
+                    <p class="icon-list__description icon-list__description--size1120">Статус ремонта</p>
+                    <img src="assets/icon/checkstatus.png" alt="checkstatus">   
+                    </button>   
                 </li>
                 </ul>
 
@@ -101,7 +138,7 @@
                 <div class="services__description">
                     <p class="services__text">
                         Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                        <span class="services__hidden-text services__hidden-text--320">
+                        <span class="services__hidden-text services__hidden-text--size320">
                             Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,<span class="services__hidden-description"> что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                             </span>
                         </span>
@@ -116,7 +153,9 @@
                 </div>
             </div>
         </section>
+    
     </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
