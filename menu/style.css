@@ -40,7 +40,7 @@
 .menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
@@ -69,7 +69,6 @@
   .menu__header {
     display: flex;
     justify-content: space-between;
-    margin-top: -58px;
   }
   
   .menu__logo {
