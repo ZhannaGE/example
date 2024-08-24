@@ -19,6 +19,7 @@ ul {
 
 a{
   color: var(--dark-text);
+  text-decoration: none;
 }
 
 
@@ -39,12 +40,15 @@ button {
 
 /*Menu*/
 
+ 
 .menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 320px;
   height: 100%;
   background-color: var(--lightMain-bg);
   z-index: 1000;
@@ -52,6 +56,7 @@ button {
   padding: 20px;
   box-sizing: border-box;
   margin: 0 auto;
+  box-shadow: 5px 0 115px rgba(0, 0, 0, 0.5);
 }
 
 .menu.active {
@@ -68,7 +73,6 @@ button {
 .menu__header {
   display: flex;
   justify-content: space-between;
-  margin-top: -58px;
 }
 
 .menu__logo {
@@ -96,7 +100,7 @@ button {
   position: relative;
   padding:10px 10px 10px 10px;
   transition: background-color 0.3s ease;
-  cursor: pointer; /* Добавим курсор для кликабельности */
+  cursor: pointer; 
 }
 
 .menu__link::before {
@@ -107,13 +111,13 @@ button {
     width: 10px;
     height: 100%;
     background-color: var(--green-line);
-    opacity: 0; /* Полоса невидима по умолчанию */
+    opacity: 0; 
     transition: opacity 0.3s ease;
     border-radius: 30px;
 }
 
 .menu__link.active::before {
-  opacity: 1; /* Полоса становится видимой при нажатии */
+  opacity: 1; 
 }
 
 .menu__link.active {
@@ -150,6 +154,25 @@ button {
   display: flex;
   justify-content: flex-start;
   gap: 10px;
+}
+
+
+.info-list {
+  display: flex;
+  gap: 20px;
+}
+
+.header__menu-button:hover,
+.info-item:hover,
+.icon-list__item img:hover,
+.menu__close-button:hover,
+.menu__search-button:hover
+ {
+  transform: scale(1.1);
+}  
+
+.menu__language a:hover{
+  color: #7e7e82;
 }
 
 

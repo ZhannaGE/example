@@ -9,12 +9,14 @@
     <link rel="icon" href="../assets/icon/repair.png" type="image/png">
 </head>
 <body>
-  <div class="menu">
-    <div class="menu__header">
+  <aside class="menu">
+    <header class="menu__header">
+        <!-- https://github.com/ZhannaGE/kataServices/blob/menu/menu/menu.html#L14 - такие же книоки в прошлом блоке были -  сдедай их блоками -->
+       <!-- они ведь разные, толи я не пойму  -->
         <button class="menu__close-button"><img src="../assets/icon/burger.png" alt="Close"></button>
-        <img src="../assets/icon/Group.png" alt="CPS Logo" class="menu__logo">
+        <a href="#"><img src="../assets/icon/Group.png" alt="CPS Logo" class="menu__logo"></a>
         <button class="menu__search-button"><img src="../assets/icon/search.png" alt="Search"></button>
-    </div>
+    </header>
     <nav class="menu__nav">
         <ul class="menu__list">
             <li class="menu__item"><a href="#" class="menu__link active">Ремонт техники</a></li>
@@ -27,34 +29,51 @@
             <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
         </ul>
     </nav>
-    <div class="menu__contacts">
+    <footer class="menu__contacts">
         <ul class="info-list">
             <li class="info-item">
-                <button>
+                <button class="info-item_button">
                 <img src="../assets/icon/chat copy.png" alt="chat copy">     
                 </button>   
             </li> 
             <li class="info-item">
-                <button>
+                <button class="info-item_button">
                 <img src="../assets/icon/chat.png" alt="chat">    
                 </button>
             </li>
             <li class="info-item">
-                <button>
+                <button class="info-item_button">
                  <img src="../assets/icon/profile.png" alt="profile">    
                 </button>
             </li>
         </ul>
-        <div class="menu__email">mail@cps.com</div>
-        <div class="menu__phone">8 800 890 8900</div>
+        <div class="menu__email"><a href="mailto:mail@cps.com">mail@cps.com</a></div>
+        <div class="menu__phone"><a href="tel:+78008908900">8 800 890 8900</a></div>
+
         <ul class="menu__languages">
-            <li class="menu__language">RU</li>
-            <li class="menu__language">EN</li>
-            <li class="menu__language">CH</li>
+            <li class="menu__language"><a href="#">RU</a></li>
+            <li class="menu__language"><a href="#">EN</a></li>
+            <li class="menu__language"><a href="#">CH</a></li>
         </ul>
-    </div>
-</div>  
-<script src="script.js"></script>
+    </footer>
+  </aside>  
+
+
+<script>
+    const elements = document.querySelectorAll('.menu__link');
+  //полосаменю
+  function clearActiveClasses() {
+    elements.forEach(element => {
+        element.classList.remove('active');
+    });
+}
+elements.forEach(element => {
+    element.addEventListener('click', function() {
+        clearActiveClasses(); 
+        this.classList.add('active'); 
+    });
+});
+</script>
 </body>
 </html>
 
