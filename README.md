@@ -1,5 +1,5 @@
-главная    https://zhannage.github.io/kataServices/
+главная    https://zhannage.github.io/kataServices/main.html
 
-меню       https://zhannage.github.io/kataServices/menu/menu.html
+меню       https://zhannage.github.io/kataServices/menu.html
 
 

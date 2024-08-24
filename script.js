@@ -54,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             element.classList.remove('active');
         });
     }
-    
-    // Добавляем обработчик клика на каждый элемент
+
     elements.forEach(element => {
         element.addEventListener('click', function() {
             clearActiveClasses(); 
