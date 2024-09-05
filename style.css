@@ -32,6 +32,7 @@ body {
   
 }
 
+
 button {
   background: none;
   border: none;
@@ -40,11 +41,12 @@ button {
 
 /*Menu*/
 
+.none{
+  display: none;
+}
  
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -62,7 +64,7 @@ button {
 .menu.active {
   display: flex; 
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 
@@ -175,7 +177,6 @@ button {
   color: #7e7e82;
 }
 
-
 /* Header */
 
 .header {
@@ -221,19 +222,6 @@ button {
 .header__logo {
   padding-right: 10%;
   position: relative;
-}
-
-@media (min-width: 320px) and (max-width: 766px) {
-  .header__logo::after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 32px;
-    background-color: #eaeaea;
-    position: absolute;
-    bottom: 15%;
-    left: 100%;
-}
 }
 
 .info--size768 {
@@ -351,6 +339,7 @@ button {
   align-items: center;
   padding: 10px;
   font-weight: 500;
+
 }
 
 .services__toggle-img {
@@ -373,8 +362,76 @@ button {
 .services__hidden-text {
   padding-top: 15px;
 }
+.blur__block{
+  display: none;
+}
 
-@media (min-width: 768px) {
+.swiper-slide {
+  width: 70%!important;
+}
+
+.brand__container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  max-height: 200px;
+  /* overflow: hidden; */
+  transition: 0.5s;
+  padding: 20px 0 30px 20px;
+  
+}
+
+
+@media (min-width: 100px) and (max-width: 666px) {
+
+  .brand__container{
+    max-height: 160px;
+    flex-direction: row;
+    /* overflow-x: hidden; */
+    flex-wrap: nowrap;
+    position: relative;
+    padding: 20px;
+  }
+
+  .brand__container::-webkit-scrollbar{
+    display: none;
+  }
+
+  .mySwiper{
+    padding-bottom: 20px !important;
+  }
+
+  .blur__block{
+    display: block;
+    width: 24px;
+    position: absolute;
+    right: -1px;
+    bottom: -10px;
+    top: -10px;
+    background: linear-gradient(90deg, rgba(244, 244, 244, 0.004), #FFFFFF);
+    z-index: 999;
+  }
+  .services__toggle-container-brand{
+    display: none;
+  }
+
+  .header__logo::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    position: absolute;
+    bottom: 15%;
+    left: 100%;
+  } 
+}
+
+
+
+
+@media (min-width: 668px) {
 
   .menu{
     width: 40%;
@@ -453,13 +510,45 @@ button {
   .services__hidden-description {
     display: none;
   }
+
+  .swiper {
+    display: none;
+  }
+
+  .services__brands-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brand__item{
+    margin: 10px;
+  }
+
+  .swiper-slide {
+    margin: 0;
+    width: 224px!important;
+  }
+
+  .swiper-pagination{
+    display: none;
+  }
+  
+  .brand__container{
+    max-height: 160px;
+    gap: 45px 45px;
+  }
 }
+
+
 
 @media (min-width: 1120px) {
   .header {
     display: none;
   }
-
+  .brand__container{
+    max-height: 170px;
+  }
   .icon-list__description{
     display: block;
   }
@@ -513,4 +602,94 @@ button {
   .services__hidden-description {
     display: inline;
   }
+  .swiper-pagination{
+    display: none;
+  }
+
+}
+
+/* блок со свайпером */
+.brand__title{
+  text-transform: uppercase;
+  color: var(--light-text);
+  font-weight: 400;
+  font-size: 18px;
+  font-family: "TT Lakes";
+  background:linear-gradient(90deg, rgba(244, 244, 244, 0.004), #FFFFFF);
+  padding: 20px 0 20px 20px;
+  
+}
+
+.brand__symbol{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  color: var(--pink-button);
+}
+
+
+.services__title{
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.brand__item{
+  border: 1px solid #EAEAEA;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  display: flex !important;
+  margin: 0 !important;
+  /* max-width: 240px; */
+  /* width: 240px; */
+  height: 72px !important;
+}
+
+.brand__logo{
+  max-width: 100px;
+  height: auto;
+}
+
+.brand__border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--pink-button);
+  border-radius: 50%;
+}
+.brand__container.active {
+  max-height: 100%;
+}
+
+.services__toggle-img.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0!important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #7e7e82!important;
+}
+
+
+.swiper-slide:nth-child(2n) {
+  width: 60%;
+}
+
+.swiper-slide:nth-child(3n) {
+  width: 40%;
 }
