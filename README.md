@@ -3,3 +3,6 @@
 меню       https://zhannage.github.io/kataServices/menu.html
 
 
+swiper    https://zhannage.github.io/kataServices/swiper.html
+
+
