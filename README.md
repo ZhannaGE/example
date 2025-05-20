@@ -1,8 +1,8 @@
-главная    https://zhannage.github.io/kata/main.html
+главная    https://zhannage.github.io/example/main.html
 
-меню       https://zhannage.github.io/kata/menu.html
+меню       https://zhannage.github.io/example/menu.html
 
 
-swiper    https://zhannage.github.io/kata/swiper.html
+swiper    https://zhannage.github.io/example/swiper.html
 
 
